@@ -1,6 +1,5 @@
 .env
 /config/*
-/src/
 /dbdata/
 __pycache__/
 db.sqlite3
