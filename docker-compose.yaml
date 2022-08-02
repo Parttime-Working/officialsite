@@ -29,8 +29,8 @@ services:
       - NGINX_PORT=${NGINX_PORT}
     depends_on:
       - django
-    ports:
-      - 8000:${NGINX_PORT}
+    expose:
+      - "8000"
     volumes:
       - nginx-config:/etc/nginx/templates/
       - ./src/${PROJECT_NAME}/static:/usr/share/nginx/html/static
@@ -47,7 +47,7 @@ services:
     ports:
       - ${DB_PORT}
     volumes:
-      - /var/lib/mysql
+      - ./dbdata:/var/lib/mysql
     restart: always
 
 volumes:
