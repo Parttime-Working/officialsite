@@ -1,4 +1,4 @@
-# django-playground
+# demo site
 
 ## Setup
 
