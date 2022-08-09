@@ -4,7 +4,22 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    msg = 'Hello'
-    now = datetime.now()
-    hour = now.timetuple().tm_hour
     return render(request, 'mainsite/index.html', locals())
+
+def about(request):
+    return render(request, 'mainsite/about.html')
+
+def ministry(request):
+    return render(request, 'mainsite/ministry.html')
+
+def sermons(request):
+    return render(request, 'mainsite/sermons.html')
+
+def events(request):
+    return render(request, 'mainsite/events.html')
+
+def blog(request):
+    return render(request, 'mainsite/blog.html')
+
+def contact(request):
+    return render(request, 'mainsite/contact.html')
