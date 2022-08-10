@@ -9,6 +9,7 @@ urlpatterns = [
     path('sermons/', views.sermons, name='sermons'),
     path('events/', views.events, name='events'),
     path('blog/', views.blog, name='blog'),
+    path('blog_single/', views.blog_single, name='blog_single'),
     path('contact/', views.contact, name='contact'),
     # path('<int:question_id>/', views.detail, name='detail'),
     # path('<int:question_id>/results/', views.results, name='results'),

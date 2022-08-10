@@ -21,5 +21,8 @@ def events(request):
 def blog(request):
     return render(request, 'mainsite/blog.html')
 
+def blog_single(request):
+    return render(request, 'mainsite/blog-single.html')
+
 def contact(request):
     return render(request, 'mainsite/contact.html')
