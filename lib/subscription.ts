@@ -1,7 +1,7 @@
 // @ts-nocheck
 // TODO: Fix this when we turn strict mode on.
 import { UserSubscriptionPlan } from "types"
-import { freePlan, proPlan } from "@/config/subscriptions"
+import { freePlan } from "@/config/subscriptions"
 import { db } from "@/lib/db"
 
 export async function getUserSubscriptionPlan(
@@ -24,11 +24,11 @@ export async function getUserSubscriptionPlan(
   }
 
   // Check if user is on a pro plan.
-  const isPro =
-    user.stripePriceId &&
-    user.stripeCurrentPeriodEnd?.getTime() + 86_400_000 > Date.now()
+  // const isPro =
+  //   user.stripePriceId &&
+  //   user.stripeCurrentPeriodEnd?.getTime() + 86_400_000 > Date.now()
 
-  const plan = isPro ? proPlan : freePlan
+  const plan = freePlan
 
   return {
     ...plan,
